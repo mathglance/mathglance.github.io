@@ -93,7 +93,7 @@
               <a href="https://scholar.google.com/citations?hl=en&user=cnVvh7AAAAAJ">Shan Zhang</a><sup style="color:#ed4b82">*</sup>,
             </span>
             <span class="author-block">
-              <a href="">Wei Tang</a>,
+              <a href="https://scholar.google.com/citations?user=D-27eLIAAAAJ&hl=zh-CN">Wei Tang</a>,
             </span>
             <span class="author-block">
               <a href=" ">Aotian Chen</a>,
@@ -105,16 +105,16 @@
               <a href="">Kai Zou</a>,
             </span>
             <span class="author-block">
-              <a href="">Yuan Xue</a>,
+              <a href="https://scholar.google.com/citations?user=yRf1kygAAAAJ&hl=zh-CN">Yuan Xue</a>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=en&user=nMGZ2ZQAAAAJ">Anton van den Hengel</a>
+              <a href="https://scholar.google.com/citations?hl=en&user=nMGZ2ZQAAAAJ">Anton van den Hengel</a><sup style="color:#514bca;">&#9993</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block"><sup style="color:#6fbf73;">1</sup>University of California, Los Angeles,</span><br> -->
-            <span class="author-block"><sup style="color:#ed4b82">*</sup>Project Leader,</span>
+            <span class="author-block"><sup style="color:#ed4b82">*</sup>Project Lead,</span> &nbsp;&nbsp;&nbsp
+            <span class="author-block"><sup style="color:#514bca;">&#9993</sup>Corresponding Author</span><br>
             <!-- <span class="author-block"><sup style="color:#ffac33">3</sup>Microsoft Research</span><br>
             <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
@@ -213,8 +213,10 @@
   <div class="container is-max-desktop">
     <div class="content has-text-centered">
       <img src="static/images/fig1.png" alt="geometric reasoning" width="100%"/>
-      <p> Performance comparison of six Multimodal Large Language Models(MLLMs) on our proposed MV-MATH dataset across 11
-        subjects(left) and 3 question types(right). SAR: Step Accuracy Rate, QCR: Question Completeness Rate.
+      <p> Figure (a) illustrates the significant performance gap between humans and current Multimodal Large Language Models (MLLMs) on <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b>, highlighting the challenge 
+        MLLMs face in fundamental perception tasks—especially fine-grained grounding—despite human proficiency "at a glance." 
+        Figure (b) demonstrates a positive correlation between low-level perception and high-level reasoning tasks, emphasizing that clear diagram perception notably enhances 
+        mathematical reasoning. These findings underscore <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b>'s importance as a benchmark for evaluating and improving perceptual capabilities in MLLMs.
       </p>
     </div>
   </div>
@@ -304,9 +306,9 @@
             </tr>
             <tr>
               <td>2</td>
-              <td><b class="">SVE-Math-DeepSeek<sup>+</sup>-7B (ours) 🥇</td>
+              <td><b class="best-score-text">SVE-Math-DeepSeek<sup>+</sup>-7B (ours) 🥇</td>
               <!-- <td>LMM 🖼️</td> -->
-              <td><a href="https://internvl.github.io/blog/2024-11-14-InternVL-2.0-MPO/" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/AI4Math-ShanZhang/SVE-Math" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">68.4</b></td>
               <td>84.6</td>
                 <td>75.8</td>
@@ -346,12 +348,33 @@
                 <td>3.2</td>
                 <td>69.7</td>
             </tr>
-            
             <tr>
               <td>3</td>
-              <td><b class="">Qwen2.5-VL-7B 🥉</b></td>
+              <td><b class="best-score-text">Qwen2-VL-72B 🥉</b></td>
               <!-- <td>LMM 🖼️</td> -->
-              <td><a href="https://github.com/InternLM/InternLM-XComposer" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/QwenLM/Qwen2.5-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><b class="best-score-text">59.9</b></td>
+              <td>42.4</td>
+              <td>51.2</td>
+              <td>50.8</td>
+              <td>17.4</td>
+              <td>52.0</td>
+              <td>71.2</td>
+              <td>97.7</td>
+              <td>84.5</td>
+              <td>6.4</td>
+              <td>77.5</td>
+              <td>66.1</td>
+              <td>76.8</td>
+              <td>98.2</td>
+              <td>16.1</td>
+              <td>84.9</td>                               
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><b class="">Qwen2.5-VL-7B </b></td>
+              <!-- <td>LMM 🖼️</td> -->
+              <td><a href="https://github.com/QwenLM/Qwen2.5-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">59.2</b></td>
               <td>44.0</td>
                 <td>56.2</td>
@@ -369,34 +392,13 @@
                 <td>3.2</td>
                 <td>78.8</td>
             </tr>
-              <td>4</td>
-              <td><b class="">Qwen2-VL-72B </b></td>
-              <!-- <td>LMM 🖼️</td> -->
-              <td><a href="https://arxiv.org/abs/2312.14238" class="ext-link" style="font-size: 16px;">Link</a></td>
-              <td><b class="best-score-text">58.5</b></td>
-              <td>42.4</td>
-              <td>51.2</td>
-              <td>50.8</td>
-              <td>17.4</td>
-              <td>52.0</td>
-              <td>69.9</td>
-              <td>97.7</td>
-              <td>84.5</td>
-              <td>0.0</td>
-              <td>77.5</td>
-              <td>63.3</td>
-              <td>76.8</td>
-              <td>98.2</td>
-              <td>6.5</td>
-              <td>84.9</td>
-              </tr>                               
-            </tr>
+            
             
             <tr>
               <td>5</td>
               <td><b class="">InternLM-XComposer2-7B</b></td>
               <!-- <td>LMM 🖼️</td> -->
-              <td><a href="https://github.com/QwenLM/Qwen-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/InternLM/InternLM-XComposer" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">55.6</b></td>
               <td>35.8</td>
               <td>49.4</td>
@@ -418,7 +420,7 @@
               <td>6</td>
               <td><b class="">GPT-4o</b></td>
               <!-- <td>MoE 🤖</td> -->
-              <td><a href="https://github.com/Alpha-VLLM/LLaMA2-Accessory/tree/main/SPHINX" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">53.3</b></td>
               <td>42.8</td>
               <td>58.4</td>
@@ -440,7 +442,7 @@
               <td>7</td>
               <td><b class="">DeepSeek-VL2-Small (16B)</b></td>
               <!-- <td>LMM 🖼️</td> -->
-              <td><a href="https://github.com/OpenBMB/MiniCPM-V" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/deepseek-ai/DeepSeek-VL2" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">51.5</b></td>
               <td>37.6</td>
               <td>47.6</td>
@@ -458,11 +460,33 @@
               <td>11.3</td>
               <td>81.8</td>
               </tr>
+              <tr>
+                <td>8</td>
+                <td><b>Qwen2-VL-7B</b></td>
+                <!-- <td>Tool 🛠️</td> -->
+                <td><a href="https://github.com/QwenLM/Qwen2.5-VL" class="ext-link" style="font-size: 16px;">Link</a></td>
+                <td><b class="best-score-text">51.4</b></td>
+                <td>37.9</td>
+                <td>47.6</td>
+                <td>41.2</td>
+                <td>12.8</td>
+                <td>53.0</td>
+                <td>64.1</td>
+                <td>93.0</td>
+                <td>78.4</td>
+                <td>14.3</td>
+                <td>55.0</td>
+                <td>52.3</td>
+                <td>84.1</td>
+                <td>88.9</td>
+                <td>3.2</td>
+                <td>18.2</td>
+              </tr>
             <tr>
-              <td>8</td>
+              <td>9</td>
               <td><b class="">InternVL2.5-8B</b></td>
               <!-- <td>Tool 🛠️</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/OpenGVLab/InternVL" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">50.7</b></td>
               <td>35.0</td>
               <td>48.8</td>
@@ -480,33 +504,12 @@
               <td>0.0</td>
               <td>69.7</td>
               </tr>
-            <tr>
-              <td>9</td>
-              <td><b>Qwen2-VL-7B</b></td>
-              <!-- <td>Tool 🛠️</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
-              <td><b class="best-score-text">50.2</b></td>
-              <td>37.9</td>
-              <td>47.6</td>
-              <td>41.2</td>
-              <td>12.8</td>
-              <td>53.0</td>
-              <td>61.4</td>
-              <td>93.0</td>
-              <td>78.4</td>
-              <td>0.0</td>
-              <td>55.0</td>
-              <td>51.4</td>
-              <td>84.1</td>
-              <td>88.9</td>
-              <td>0.0</td>
-              <td>18.2</td>
-              </tr>
+            
             <tr>
               <td>10</td>
               <td><b>mPLUG-owl3-7B</b></td>
               <!-- <td>LMM 🖼️</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/X-PLUG/mPLUG-Owl" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">50.0</b></td>
               <td>36.4</td>
               <td>46.7</td>
@@ -528,7 +531,7 @@
               <td>11</td>
               <td><b>InternVL2-8B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/OpenGVLab/InternVL" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">48.4</b></td>
               <td>31.9</td>
               <td>44.3</td>
@@ -550,7 +553,7 @@
               <td>12</td>
               <td><b>SVE-Math-DeepSeek-7B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/AI4Math-ShanZhang/SVE-Math" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">46.6</b></td>
               <td>35.4</td>
               <td>52.4</td>
@@ -572,7 +575,7 @@
               <td>13</td>
               <td><b>MultiMath-7B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/pengshuai-rin/MultiMath" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">41.8</b></td>
               <td>31.2</td>
               <td>44.0</td>
@@ -594,7 +597,7 @@
               <td>14</td>
               <td><b>Math-LLaVA-7B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/HZQ950419/Math-LLaVA" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">40.0</b></td>
               <td>27.9</td>
               <td>34.4</td>
@@ -616,7 +619,7 @@
               <td>15</td>
               <td><b>GPT-o1</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">36.5</b></td>
               <td>15.8</td>
               <td>33.2</td>
@@ -638,7 +641,7 @@
               <td>16</td>
               <td><b>LLaVA-v1.5-13B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/haotian-liu/LLaVA" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">35.4</b></td>
               <td>32.8</td>
               <td>29.3</td>
@@ -660,7 +663,7 @@
               <td>17</td>
               <td><b>LLaVA-v1.5-7B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/haotian-liu/LLaVA" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">33.3</b></td>
               <td>29.2</td>
               <td>29.0</td>
@@ -682,7 +685,7 @@
               <td>18</td>
               <td><b>DeepSeek-VL2-Tiny</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/deepseek-ai/DeepSeek-VL2" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">32.6</b></td>
               <td>29.5</td>
               <td>45.2</td>
@@ -704,7 +707,7 @@
               <td>19</td>
               <td><b>G-LLaVA-7B</b></td>
               <!-- <td>-</td> -->
-              <td><a href="https://arxiv.org/abs/2310.02255" class="ext-link" style="font-size: 16px;">Link</a></td>
+              <td><a href="https://github.com/pipilurj/G-LLaVA" class="ext-link" style="font-size: 16px;">Link</a></td>
               <td><b class="best-score-text">30.3</b></td>
               <td>25.6</td>
               <td>27.8</td>
