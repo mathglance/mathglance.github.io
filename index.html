@@ -764,13 +764,13 @@
 
           The MathGLance benchmark is a novel evaluation framework designed to assess the mathematical perception abilities of Multimodal Large Language Models (MLLMs). Unlike existing benchmarks that often conflate perception with high-level reasoning tasks, MathGLance isolates perceptual skills by focusing on mathematical visual reasoning with minimal cognitive load. It provides both quantitative and qualitative assessments across different granularity levels. 
 
-          The benchmark covers a diverse range of mathematical contexts, including Plane Geometry (66%), Solid Geometry (20%), and Graphical data representations (14%) such as line plots, bar charts, and pie charts. It comprises 1,609 questions and 1,198 unique images, formulated mainly as multiple-choice or true/false questions to streamline evaluation. 
+          The benchmark covers a diverse range of mathematical contexts, including Plane Geometry (<em>66%</em>), Solid Geometry (<em>20%</em>), and Graphical data representations (<em>14%</em>) such as line plots, bar charts, and pie charts. It comprises <em>1,609</em> questions and <em>1,198</em> unique images, formulated mainly as multiple-choice or true/false questions to streamline evaluation. 
 
           MathGLance features four key task categories:
-            1. Shape Classification: Identifies object classes based on visual attributes like vertices, material, color, and size. The dataset includes 16 plane geometry shapes, 3 CLEVR-defined objects for solid geometry, and 5 graphical elements.
-            2. Object Counting: Evaluates the model's ability to count either the total number of objects or specific geometric shapes within an image.
-            3. Relationship Identification: Assesses understanding of spatial and mathematical relationships between geometric primitives, covering 4 spatial and over 10 mathematical relationships.
-            4. Object Grounding: Measures fine-grained localization by predicting object coordinates (x1, y1, x2, y2) based on textual descriptions.
+            <b>1.</b> Shape Classification: Identifies object classes based on visual attributes (e.g., vertices, material, color, size) across <em>16</em> plane geometry categories, <em>3</em> CLEVR-defined solid objects, and <em>5</em> graphical types.
+            <b>2.</b> Object Counting: Evaluates the model's ability to count either the total number of objects or specific geometric shapes within an image.
+            <b>3.</b> Relationship Identification: Assesses understanding of spatial and mathematical relationships between geometric primitives, covering <em>4</em> spatial and over <em>10</em> mathematical relationships.
+            <b>4.</b> Object Grounding: Measures fine-grained localization by predicting object coordinates (x1, y1, x2, y2) based on textual descriptions.
 
             MathGLance is designed to challenge MLLMs in mathematical perception while minimizing high-level reasoning demands, offering a comprehensive and fine-grained evaluation of visual reasoning abilities.
             <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
