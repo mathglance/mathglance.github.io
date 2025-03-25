@@ -1,0 +1,603 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=sunburst-drink&lang=js&code=LYTwwgFghgTgLgOhgUwM4EsBeyAUBvAKAAIiB3dAEzggC4iA2ABkYBoiB6dowBtNAQt0F7tQGV6xIhGToA5hDh0mjDlz6ANrOEBfAJQBuAgDdYRClDhQiAXiIBtEYRIkAdlGDI6AcgAKAGyh3kRAOLIAPZOcDAgLiwiJHoeAK7ORACMjPQArJG2ROhwyMAAynAgHgk2mUQAxoEegTCuAMQAzOUA7ACcAEYALC5RRKoZtuUQ6B4UKHZ0VmVEpdMOTq5gXqgYAGbo5UbogXYRvZkx8XQNDZ0D09m5BUUl-2WV1bVELnXIyKvNq-U90yT9dyQhiMxsgJpYAbZZr97I4Ei5yugYOVintoQcoHEEql6Oc0Zd8oVinQoWiKlUavVVq1WshEt8IZlVAy-rjpiTfvM4cgPB50AAHVDIVGkoiHBLJVm_fHXIkzZmZB4U551Kk0uk_EVM0n_Unsuaw1yoACOsVgQsl0zFdESDQtZWlhNuIsG5KeL1VtPpzq1aJ1aL1ZU5rlCUD5yEwgUowtJVqIACZEnbMg6bsT5S7HpTqZ6NdrmX7oQHMkHniaoGNvBIUUnbLGGgAOGskFOyov3V1ZtVezX5mttmELZ6CiROOxwaNo2OJVpNrI5AmpuXOwEd5Ue9Xpn3Qgu_ftEEsuZAmkZGZAwDFEMtjE85c8eCfQqdx2ctp3LxVulXZjfe3vMvcHmGY5QBIOwPr8sZxs-6avmmy5kpma7ft2eban26YHqgmzFD4RChOglbVumkG2jB84ym-zofp2Oabn-uoYQazzoKggRYdyaB4TABF2FW5rERiRzxukZFXI6cHvqu7rIbmvr0f6jGDi43FSHAXE8Xx4GWoJCQNCJzqwUukmIdJXaydu8mFopXLHl4t4XvhhH8c6U76SKhl7iuJlfmZdFoQQ_7Wa4LFseUHGoFxobhpGFBaWUrkvuR4lGVRUk-bRv7-QxzoHig5TGLxREuTp1puaSHnpl5SqmRlPZZQpOVMcpkjSJFYYRlGs4JaJC6tpVCHVelP51XJ0IALp3DuJABgeYCBLEY7oLxcWQakrAQhVpLUcqzT1lATQoWUU2DMMozjJMgWNUpdQAHJmEkcXopidBxjOPUURJqXeRQ9D0J0qz1uZvxbsD6FXXCt33XGj21iVSSJGVeJJYunkDZ-P1_QDQPTCDONgyKB6Q-YDQw9EcPJIm73Jaj20vBj_2A35vr46ShN3eY3RdXDiPQptxmDfTWNMxZ42TZKM1NQAStyWxgXakHMHafPQrTdTtE0FDIN0ELHYCp0gmCUwNQTTV8pGY5ECgqzFPl2y7Fzz1JNBBnI318Gq6sUDtKkrSMNjR2WbuQXPLyuH4YK5QIKTopw3GOJUyj_Ue17Pt-8LoOXSbSlhjAQEUBssReDA0dPolYmJ-7aWe97vv-4yf6Z6zTVOUQ7Qscg-VRw7QmJM77mu5RIrJzXaeZczjdogeLfhx3iAl7HlMu-Xbv85-1ep3Xti40dkQT9CB5LbeEddwJjsSgnK9fYN6-1-neN7xyTVy6fQlxqRS-9YPW1Vynt9j9uLNJ6m1gBiYo95u7inWh_D6KUh4_xHpvP4gc2TBxcEtBESIioikgs0Mun9PpwO8jfUeI0AEBWylnOEBUJCgnHBAugb1oHUyTvAjed8d4P31EpVAfItgYnno7BseCYE01YX_UhwMIQTXvig_eTU_AwHmnYfOy15ax3rIvKUA8CHTFVowRI_1WiHXrjjXo0iWTWF6AePIkZRj-CCCEMIE46xx1xMrDMg16xgAAGIAFEABCABBWSO4gRnVBBdWRj8lJLCgCsdA6xNhwDtitOG9Z46820bA3RaUwCdD8a0AAIv7XWFR9bnXBBQpuSlyhFCWprYu9D4yNgvl_NEHsZLsMZIAuRNTYjtGctguGDQoH92Xm0lWVdOn_wzlUoB3C-RiBQAI1-LSmEV1XjRYaqFRq_HMd0u4EsYlKOSaoiEsZWi4I2lktsqtfGMG8YU-sviSl2jCQbSJxtqkQzuoAEyIGArN0u_MZ-DsntLSoLRmMyZFfPmT8og_zkiAtkGcVpOjwXfV-gzRBfR8xSLFociEB5pZ2RSWox29ZRkXBucyVW3ifFgGaN415EJ3kVKNlZcGhpeHJP4U0ylwjmGVyIb_EhOyRZ7IJVErhcIFFKJURIVJjt6DAupeM9FCo0qBPrH4wJ_iSmTTMSIP0UIDwKNDBAVAziF5rNsO4qqn436tHrKkWKvRQnlIiZUsoRy4SxPiYk2W9tzlw3oIwrR6qwWau8jaVIJwhQ6zeZ6w2nDAxNR0GeZJ2FW6wGRfDQVGyr5r2mRImFnLKGuAgDULAOxjAeBzY0l-4pNHlRpcK6-JbxWzNhb0uEFBAhqVDoMmMC8C2X0IR23y0KOFzN7a4Pk6Bh2TnJqqpGkbRFEM7bsshqbixNSHXmm0Y6Jm_A6VO0tAdRZlshESpqc0FqnMVeSoSqRUWZPXbStKnQGjtHaM0EmibWXJs-eW759Q_kAqaQ0K56zx3f0xZjKFF6DmzuifCxFfsmmJBgyCkRLCEPYq6VvfF99CVzueCSoNSqhInCVm2jFnjEgUFSFAaGgGVbAe9aBuFrhgBLWAFAAAHoe1d77QUbuvqKnF28Dm7tsAfMcZ4I7JOfsVM-GTcNCs2WuKTRG_g9LQ4aYAgQB0QB8CsPNb7NOFonWvXT06TGSuvdNW9Sk5ULQVdRhI9A-5qvE5-7yYBEi-OaGAYpOtDWZHMUyMa2gCCBD5Cpuw91Sg5EE3APDmRVi1ryFgSBxqBgSG4hQYkRBBN0FYEQEAFW2CCbjDVqr9WiDyD9HAEzHh2iBHK7A1AVbSB0FCPEXEnAiCAD7owAdv54Xa51wTRBeCAFl5cbvQVLSFcL7AApBEBQRBAC7sYAbs9ACd2oACzVADPyoAcvleD7cADD_gB75UAKdygB6M0APMKgACX0ADwKgA0I0AH5ugAwJUACvWvQ2t8lcGtTbbARv7eO4ANwzAAXCZdvbt3Huvc-79gHWXkBGFiCgdFhhjAAC0TPAA1VVwJgmWIAEllHIG6y4OwOwE3OYMEYKAAA1Rd_Wo2WwxxQAA8nYDw1WiCew8IKKVZQBMSA2AAFRAGGYnhQ5eWBcAetgLh2i5v2VvSUKBUBtexzMY6qAoAZsCagcnEuT0LsE9ySWstjiReI_pkQI3klwBXiNkgaWZDPAAOo88lgAGUKUQMAPPvF-N8UQSWvi8i-MCZLMAAAJIgsebp5H9wATSIAH3xAANcnoebrCg90QVA_SveuBsVjsKdBpBwAFDQTgpAaijEqKsVYbwdcY6RBABANQJDsGbzAAA1uwQUdhWJhAALTFDJ5UOw7Bi9cE99TjLWmS8kGy2OXL2BrRWY30QDEkgwTwloWeDUJe_Ql7L-0L3mXtuZCPxIE_YVFPF2d8vixJBr_9NDsPytcA9eqAjeg-LeFAbeHeZ4aA3eQwfeMAA-Q-o-4-k-IAM-1OGwOwi-H-X-peZ4i6wBsCCucIZedg7QWOuuewvQuOUAdA1BuI54-csQBBFglWLgyQjAm2Y0uIk-3uHm7wS0yAFAu8mQuQiycSLE6K2W5QTBrg3gYUuuNQISwhtgxQGaIuIGkIx0AYMAjArgCMYOEIboekBhYm9-0InWMADSPulA1AL07GvwXgAyHgxOJAiixgOQwYlYtCBE94EWjO2huhzwxhcUboaQJhDhXs3ILhh-vIz-rgK244fhM6PqhhgRLgYRIRrgzQHBcUjhURnOJAZsGASWrg80cAGAmsMMvCFACq1oNYGAOE3uwuouZCphWm5hNQVhNhtARADQSRjmJA0WBAqgmgQAA&renderer=svg
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/zh/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/zh/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/zh/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'svg',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    myChart.resize({
+  width: 600, // 新的宽度
+  height: 600 // 新的高度
+});
+var data = [
+  {
+    name: 'Plane Geometry',
+    value: 1065,
+    itemStyle: {
+      color: '#3c79b4'
+    },
+    children: [
+      {
+        name: 'Classification',
+        value: 334,
+        itemStyle: {
+          color: '#eef7fc'
+        },
+        children: [
+          {
+            name: 'circle',
+            value: 56,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'ellipse',
+            value: 10,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'square',
+            value: 13,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'trapezoid',
+            value: 21,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'quadrangle',
+            value: 38,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'segment',
+            value: 19,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'equilateral quadrilateral',
+            value: 12,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'pentagon',
+            value: 22,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'scalene triangle',
+            value: 23,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'isosceles triangle',
+            value: 25,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'right triangle',
+            value: 35,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'equilateral triangle',
+            value: 15,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+
+          {
+            name: 'isosceles trapezoid',
+            value: 15,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'rectangle',
+            value: 15,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'right trapezoid',
+            value: 15,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Counting',
+        value: 250,
+        itemStyle: {
+          color: '#78a3cc'
+        },
+        children: [
+          {
+            name: '#N = 1',
+            value: 29,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          },
+          {
+            name: '#N = 2',
+            value: 115,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          },
+          {
+            name: '#N = 3',
+            value: 101,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          },
+          {
+            name: '#N = 4',
+            value: 5,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Relation',
+        value: 200,
+        itemStyle: {
+          color: '#b3cde4'
+        },
+        children: [
+          {
+            name: 'point reflection',
+            value: 12,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'line trisec.',
+            value: 26,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'perpendicular',
+            value: 12,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+
+          {
+            name: 'angle bisect.',
+            value: 12,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'angle trisect.',
+            value: 21,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+
+          {
+            name: 'intersec.',
+            value: 10,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'on',
+            value: 23,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'parallel',
+            value: 10,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'incircle',
+            value: 27,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+
+          {
+            name: 'tangent',
+            value: 9,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'spatial',
+            value: 38,
+            itemStyle: {
+              color: '#fab590'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Grounding',
+        value: 281,
+        itemStyle: {
+          color: '#014f9c'
+        }
+      }
+    ]
+  },
+  {
+    name: 'Soild Geometry',
+    value: 326,
+    itemStyle: {
+      color: '#8CFEBA'
+    },
+    children: [
+      {
+        name: 'Classification',
+        value: 86,
+        itemStyle: {
+          color: '#C4FE9D'
+        },
+        children: [
+          {
+            name: 'cylinder',
+            value: 28,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'cube',
+            value: 30,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'sphere',
+            value: 28,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Counting',
+        value: 97,
+        itemStyle: {
+          color: '#E0FD8E'
+        },
+        children: [
+          {
+            name: '#N ≤ 6',
+            value: 33,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          },
+          {
+            name: '#N ≤ 10',
+            value: 64,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Relation',
+        value: 80,
+        itemStyle: {
+          color: '#FCFC7F'
+        },
+        children: [
+          {
+            name: 'spatial',
+            value: 80,
+            itemStyle: {
+              color: '#fab590'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Grounding',
+        value: 63,
+        itemStyle: {
+          color: '#A8FEAB'
+        }
+      }
+    ]
+  },
+  {
+    name: 'Graphs',
+    value: 218,
+    itemStyle: {
+      color: '#23985d'
+    },
+    children: [
+      {
+        name: 'Classification',
+        value: 69,
+        itemStyle: {
+          color: '#13533e'
+        },
+        children: [
+          {
+            name: 'vertical bar',
+            value: 11,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'horizontal bar',
+            value: 11,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'dot line',
+            value: 21,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+          {
+            name: 'pie',
+            value: 13,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          },
+
+          {
+            name: 'line',
+            value: 13,
+            itemStyle: {
+              color: '#f99e1c'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Counting',
+        value: 54,
+        itemStyle: {
+          color: '#43bb73'
+        },
+        children: [
+          {
+            name: '#N ≤ 6',
+            value: 37,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          },
+          {
+            name: '#N ≤ 10',
+            value: 17,
+            itemStyle: {
+              color: '#d664f8'
+            }
+          }
+        ]
+      },
+
+      {
+        name: 'Relation',
+        value: 33,
+        itemStyle: {
+          color: '#81d5a2'
+        },
+        children: [
+          {
+            name: 'minmax',
+            value: 13,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+
+          {
+            name: 'intersection',
+            value: 16,
+            itemStyle: {
+              color: '#fab590'
+            }
+          },
+          {
+            name: 'smoothness',
+            value: 4,
+            itemStyle: {
+              color: '#fab590'
+            }
+          }
+        ]
+      },
+      {
+        name: 'Grounding',
+        value: 62,
+        itemStyle: {
+          color: '#C1E7CD'
+        }
+      }
+    ]
+  }
+];
+
+option = {
+  textStyle: {
+    fontSize: 10
+  },
+  grid: { x: 0, y: 0, x2: 0, y2: 0 },
+  toolbox: {
+    show: true,
+    // 设置 toolbox 的位置
+    right: '90%', // 距离容器右侧的距离，可以是像素值或百分比
+    top: '50%', // 距离容器顶部的距离，可以是像素值或百分比
+    feature: {
+      dataZoom: {
+        yAxisIndex: 'none'
+      },
+      dataView: {
+        readOnly: false
+      },
+      magicType: {
+        type: ['line', 'bar']
+      },
+      restore: {},
+      saveAsImage: {
+        pixelRatio: 3
+      }
+    }
+  },
+  // title: {
+  //   text: 'WORLD COFFEE RESEARCH SENSORY LEXICON',
+  //   subtext: 'Source: https://worldcoffeeresearch.org/work/sensory-lexicon/',
+  //   textStyle: {
+  //     fontSize: 14,
+  //     align: 'center'
+  //   },
+  //   subtextStyle: {
+  //     align: 'center'
+  //   },
+  //   sublink: 'https://worldcoffeeresearch.org/work/sensory-lexicon/'
+  // },
+  series: {
+    type: 'sunburst',
+
+    data: data,
+    radius: [0, '100%'],
+    sort: undefined,
+
+    emphasis: {
+      focus: 'ancestor'
+    },
+
+    levels: [
+      {},
+      {
+        r0: '15%',
+        r: '35%',
+        itemStyle: {
+          borderWidth: 2
+        },
+        label: {
+          rotate: 'tangential'
+        }
+      },
+      {
+        r0: '35%',
+        r: '65%',
+        label: {
+          align: 'right'
+        }
+      },
+      {
+        r0: '65%',
+        r: '70%',
+        label: {
+          position: 'outside',
+          padding: 1,
+          silent: false
+        },
+        itemStyle: {
+          borderWidth: 3
+        }
+      }
+    ]
+  }
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
