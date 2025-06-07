@@ -81,7 +81,7 @@
             <span class="mathvista" style="vertical-align: middle">MathGlance</span>
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            Evaluating Visual Perception in Mathematical Visual Contexts
+            Evaluating MLLMs on Abstract Visual and Symbolic Understanding in Mathematical Diagrams
             <!-- <br> -->
             <!-- with GPT-4V, Bard, and Other Large Multimodal Models -->
           </h2>
@@ -120,7 +120,7 @@
             <span class="paper-block"><b style="color:#f41c1c">ICLR 2024 Oral</b> (85 in 7304, 1.2%)</span> -->
           </div>
           <div class="is-size-6 publication-authors">
-            <span class="author-block">Email: <b style="color:#ed4b82">shan.zhang@adelaide.edu.au</b>; <b style="color:#ed4b82">yanpeng_sun@nus.edu.sg</b>; <b style="color:#ed4b82">anton.vandenhengel@adelaide.edu.au</b>; </span> 
+            <span class="author-block">Email: <b style="color:#ed4b82">shan.zhang@adelaide.edu.au</b>; <b style="color:#ed4b82">yanpeng_sun@nus.edu.sg</b>; <b style="color:#ed4b82">anton.vandenhengel@adelaide.edu.au</b> </span> 
           </div>
 
 
@@ -218,10 +218,11 @@
   <div class="container is-max-desktop">
     <div class="content has-text-centered">
       <img src="static/images/fig1.png" alt="geometric reasoning" width="100%"/>
-      <p> Figure (a) illustrates the significant performance gap between humans and current Multimodal Large Language Models (MLLMs) on <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b>, highlighting the challenge 
-        MLLMs face in fundamental perception tasks—especially fine-grained grounding—despite human proficiency "at a glance." 
-        Figure (b) demonstrates a positive correlation between low-level perception and high-level reasoning tasks, emphasizing that clear diagram perception notably enhances 
-        mathematical reasoning. <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b> is a critical standard for evaluating and advancing multimodal mathematical understanding, providing valuable resources and insights to foster future MLLM research.
+      <p> Although both natural images and symbolic diagrams can be represented as grids of pixels, they constitute very different forms of information.  
+        Images represent samples of the intensity of the real world, while diagrams are human-constructed and convey geometric concepts through structured symbols 
+        and their interrelationships. Figure (a) illustrates that diagrams pose unique challenges for current Multimodal Large Language Models (MLLMs), 
+        particularly in fine-grained grounding task.  Figure (b) demonstrates a positive correlation between low-level perception and high-level reasoning tasks, 
+        emphasizing that clear diagram perception leads to substantial improvements in mathematical reasoning performance.
     </div>
   </div>
 </section> 
@@ -259,16 +260,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Diagrams serve as a fundamental form of visual language, representing complex concepts and their inter-relationships through structured symbols, shapes, and 
-            spatial arrangements. Unlike natural images, their inherently symbolic and abstract nature poses significant challenges for Multimodal Large Language Models (MLLMs). 
-            However, current benchmarks conflate perceptual and reasoning tasks, making it difficult to assess whether MLLMs genuinely understand mathematical diagrams beyond 
-            superficial pattern recognition. To address this gap, we introduce <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b>, a benchmark specifically designed to isolate and evaluate mathematical perception in 
-            MLLMs. <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b> comprises 1.2K images and 1.6K carefully curated questions spanning four perception tasks: shape classification, object counting, relationship 
-            identification, and object grounding, covering diverse domains including plane geometry, solid geometry, and graphical representations. Our evaluation of MLLMs 
-            reveals that their ability to understand diagrams is notably limited, particularly in fine-grained grounding tasks. In response, we construct GeoPeP, a 
-            perception-oriented dataset of 200K structured geometry image-text pairs explicitly annotated with geometric primitives and precise spatial relationships. 
-            Training MLLM on GeoPeP leads to significant gains in perceptual accuracy, which in turn substantially improves mathematical reasoning. 
-        
+            Diagrams are a form of visual language, representing complex concepts and their interrelationships through structured symbols, shapes, and spatial arrangements. 
+            Unlike natural images, they are inherently symbolic and abstract.  Diagrams thus pose significant challenges for Multimodal Large Language Models (MLLMs). 
+            Current benchmarks conflate perceptual and reasoning tasks, making it difficult to assess whether MLLMs genuinely understand mathematical diagrams beyond superficial 
+            pattern recognition and textual memorization. To address this gap, we introduce <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b>, a benchmark specifically designed to isolate and evaluate diagram perception 
+            in MLLMs. <img src="static/images/MathGlance_logo.png" style="width:1.0em;vertical-align: middle" alt="Logo"/> <b>MathGLance</b> comprises 1.2K diagrams and 1.6K carefully curated questions spanning four perception tasks: shape classification, object counting, 
+            relationship identification, and object grounding, covering diverse domains including plane geometry, solid geometry, and graphical representations. 
+            Our evaluation of MLLMs reveals that their ability to understand diagrams is limited, particularly in fine-grained grounding tasks. 
+            In response, we construct the perception-oriented GeoPeP, a 200K dataset that represents geometric diagrams as structured graphs capturing primitives, 
+            their spatial relationships, and fine-grained bounding boxes. Training MLLM on GeoPeP leads to significant gains in perceptual accuracy, 
+            which in turn substantially improves mathematical reasoning. Our benchmark and dataset establish critical standards for evaluating and advancing multimodal 
+            mathematical understanding, providing valuable resources and insights to foster future MLLM research.
           </p>
         </div>
       </div>
@@ -838,10 +840,10 @@
           The benchmark covers a diverse range of mathematical contexts, including Plane Geometry (<em>66%</em>), Solid Geometry (<em>20%</em>), and Graphical data representations (<em>14%</em>) such as line plots, bar charts, and pie charts. It comprises <em>1,609</em> questions and <em>1,198</em> unique images, formulated mainly as multiple-choice or true/false questions to streamline evaluation. 
 
           MathGLance features four key task categories:
-            <b>1.</b> Shape Classification: Identifies object classes based on visual attributes (e.g., vertices, material, color, size) across <em>16</em> plane geometry categories, <em>3</em> CLEVR-defined solid objects, and <em>5</em> graphical types.
-            <b>2.</b> Object Counting: Evaluates the model's ability to count either the total number of objects or specific geometric shapes within an image.
-            <b>3.</b> Relationship Identification: Assesses understanding of spatial and mathematical relationships between geometric primitives, covering <em>4</em> spatial and over <em>10</em> mathematical relationships.
-            <b>4.</b> Object Grounding: Measures fine-grained localization by predicting object coordinates (x1, y1, x2, y2) based on textual descriptions.
+            <b>1)</b> Shape Classification which identifies object classes based on visual attributes (e.g., vertices, material, color, size) across <em>16</em> plane geometry categories, <em>3</em> CLEVR-defined solid objects, and <em>5</em> graphical types;
+            <b>2)</b> Object Counting which evaluates the model's ability to count either the total number of objects or specific geometric shapes within an image;
+            <b>3)</b> Relationship Identification which assesses understanding of spatial and mathematical relationships between geometric primitives, covering <em>4</em> spatial and over <em>10</em> mathematical relationships;
+            <b>4)</b> Object Grounding which measures fine-grained localization by predicting object coordinates (x1, y1, x2, y2) based on textual descriptions.
 
             MathGLance is designed to challenge MLLMs in mathematical perception while minimizing high-level reasoning demands, offering a comprehensive and fine-grained evaluation of visual reasoning abilities.
             <!-- a compilation of data 1) carefully examined and filtered from 28 existing VQA and MathQA datasets and 2) manually collected by us. In total, 6,141 examples were collected from 31 different datasets. -->
